@@ -8,12 +8,12 @@ to the newer OS-dependent location:
 
 Run a dry run with
 ```bash
-$ cs launch cache-migration -- --dry-run
+$ cs launch --contrib cache-migration -- --dry-run
 ```
 
 Really run it with
 ```bash
-$ cs launch cache-migration
+$ cs launch --contrib cache-migration
 ```
 
 If both the legacy and the newer cache directories exist on your system,
@@ -24,5 +24,5 @@ these options are:
 
 You should then run `cache-migration` like
 ```bash
-$ cs launch cache-migration -- --one-by-one --clean-up
+$ cs launch --contrib cache-migration -- --one-by-one --clean-up
 ```
