@@ -33,7 +33,7 @@ $ cs launch --contrib cache-migration -- --one-by-one --clean-up
 
 Create a launcher for cache-migration with
 ```bash
-$ cs bootstrap --standalone --contrib cache-migration -o cache-migration
+cs bootstrap --standalone --contrib cache-migration -o cache-migration
 ```
 
 This creates two files in the current directory:
