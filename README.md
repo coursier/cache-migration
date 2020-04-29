@@ -18,6 +18,12 @@ Really run it with
 $ cs launch --contrib cache-migration
 ```
 
+Optionally, pass `--clean-up` to remove `~/.coursier/cache`, if it's empty
+after the migration
+```bash
+$ cs launch --contrib cache-migration -- --clean-up
+```
+
 If both the legacy and the newer cache directories exist on your system,
 a message will invite you to pass some extra options. As of writing this,
 these options are:
@@ -47,6 +53,10 @@ Then follow the Linux and macOS instructions above, replacing `cs launch --contr
 
 ```bash
 .\cache-migration
+```
+
+```bash
+.\cache-migration --clean-up
 ```
 
 ```bash
