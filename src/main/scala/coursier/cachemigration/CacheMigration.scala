@@ -171,8 +171,13 @@ object CacheMigration extends CaseApp[Options] {
     }
 
     if (!Files.exists(options.fromPath)) {
-      System.err.println(s"${options.fromPath} not found, exiting.")
-      sys.exit(if (options.isDefaultFrom) 0 else 1)
+      if (options.isDefaultFrom) {
+        System.err.println(s"${options.fromPath} not found, all is well, nothing to migrate.")
+        sys.exit(0)
+      } else {
+        System.err.println(s"${options.fromPath} not found, exiting.")
+        sys.exit(1)
+      }
     } else if (!Files.isDirectory(options.fromPath)) {
       System.err.println(s"${options.fromPath} is not a directory, exiting.")
       sys.exit(1)
